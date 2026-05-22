@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "demand-forecasting"
+version = "0.1.0"
+description = "Demand forecasting with StatsForecast, Prophet, LightGBM and SHAP"
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+statsforecast = ">=1.7"
+prophet = ">=1.1"
+shap = ">=0.44"
+lightgbm = ">=4.3"
+scikit-learn = ">=1.4"
+pandas = ">=2.1"
+numpy = ">=1.26"
+matplotlib = ">=3.8"
+seaborn = ">=0.13"
+jupyter = ">=1.0"
+ipykernel = ">=6.29"
+ipywidgets = ">=8.1"
+plotly = "^6.7.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+isort = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
