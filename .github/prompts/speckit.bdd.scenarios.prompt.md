@@ -1,0 +1,3 @@
+---
+agent: speckit.bdd.scenarios
+---
