@@ -9,9 +9,9 @@ Demand forecasting on a 100-series retail dataset (5 stores × 20 products, dail
 ├── demand_forecasting.csv  # Source dataset (76,000 rows, 16 columns)
 ├── PLAN.md                 # Modeling plan: dataset summary, models, pipeline, notebook step list
 ├── dataset_findings.md     # Verified facts about the CSV (columns, dates, splits, data quality)
-├── pyproject.toml          # Poetry project config and dependencies
-├── poetry.lock             # Locked dependency versions
-├── requirements.txt        # Plain pip dependency list (alternative to Poetry)
+├── pyproject.toml          # uv project config and dependencies
+├── poetry.lock             # Legacy Poetry lock file
+├── requirements.txt        # Plain pip dependency list (alternative to uv)
 ├── .devcontainer/          # VS Code devcontainer config
 ├── .vscode/                # Editor settings
 ├── .idea/                  # PyCharm project files
@@ -52,9 +52,9 @@ Train window: 2022-01-01 → 2024-01-16. Test window: 2024-01-17 → 2024-01-30 
 ## Setup
 
 ```bash
-poetry install
-# or
-pip install -r requirements.txt
+uv sync
+# or, without creating a project environment
+uv run jupyter lab
 ```
 
 Key dependencies: `statsforecast`, `prophet`, `lightgbm`, `shap`, `scikit-learn`, `pandas`, `plotly`, `jupyter`.

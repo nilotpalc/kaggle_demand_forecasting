@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/kaggle_demand_forecasting.iml" filepath="$PROJECT_DIR$/.idea/kaggle_demand_forecasting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/demand-forecasting@1.iml" filepath="$PROJECT_DIR$/.idea/demand-forecasting@1.iml" />
     </modules>
   </component>
 </project>

@@ -18,6 +18,40 @@
       },
       "registered_skills": [],
       "installed_at": "2026-05-28T09:47:16.661373+00:00"
+    },
+    "assess": {
+      "version": "1.0.0",
+      "source": "local",
+      "manifest_hash": "sha256:6eba1ffbc264c7aa43e31b34303a8312ddad5b979772d2785c808179b402d9f2",
+      "enabled": true,
+      "priority": 10,
+      "registered_commands": {
+        "copilot": [
+          "speckit.assess.intake",
+          "speckit.assess.research",
+          "speckit.assess.define",
+          "speckit.assess.shape",
+          "speckit.assess.decide"
+        ]
+      },
+      "registered_skills": [],
+      "installed_at": "2026-09-06T14:01:47.586210+00:00"
+    },
+    "bdd": {
+      "version": "1.0.3",
+      "source": "local",
+      "manifest_hash": "sha256:9092d61e8e6ebb0b68f8ee3a27aa81f664bc4e8bae045a828a8f2bfa0eddeb2f",
+      "enabled": true,
+      "priority": 10,
+      "registered_commands": {
+        "copilot": [
+          "speckit.bdd.scenarios",
+          "speckit.bdd.scaffold",
+          "speckit.bdd.verify"
+        ]
+      },
+      "registered_skills": [],
+      "installed_at": "2026-09-06T14:02:44.150906+00:00"
     }
   }
 }

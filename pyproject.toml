@@ -1,30 +1,32 @@
-[tool.poetry]
+[project]
 name = "demand-forecasting"
 version = "0.1.0"
 description = "Demand forecasting with StatsForecast, Prophet, LightGBM and SHAP"
-authors = []
 readme = "README.md"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "cmdstanpy>=1.3",
+    "ipykernel>=6.29",
+    "ipywidgets>=8.1",
+    "jupyter>=1.0",
+    "lightgbm>=4.3",
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "plotly>=6.7",
+    "prophet>=1.1",
+    "scikit-learn>=1.4",
+    "seaborn>=0.13",
+    "shap>=0.44",
+    "statsforecast>=1.7",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.10,<3.12"
-statsforecast = ">=1.7"
-prophet = ">=1.1"
-shap = ">=0.44"
-lightgbm = ">=4.3"
-scikit-learn = ">=1.4"
-pandas = ">=2.1"
-numpy = ">=1.26"
-matplotlib = ">=3.8"
-seaborn = ">=0.13"
-jupyter = ">=1.0"
-ipykernel = ">=6.29"
-ipywidgets = ">=8.1"
-plotly = "^6.7.0"
+[dependency-groups]
+dev = [
+    "black>=24.0",
+    "isort>=5.0",
+]
 
-[tool.poetry.group.dev.dependencies]
-black = "*"
-isort = "*"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.uv]
+# This repository contains a notebook rather than an installable Python package.
+package = false

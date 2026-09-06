@@ -5,8 +5,8 @@
   // Python version — change tag to switch versions (3.9, 3.10, 3.11, 3.12)
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
 
-  // Installs Poetry, then installs dependencies from pyproject.toml
-  "postCreateCommand": "pip install poetry && poetry install --no-root",
+  // Installs uv, then installs dependencies from pyproject.toml
+  "postCreateCommand": "pip install uv && uv sync",
 
   "customizations": {
     "vscode": {

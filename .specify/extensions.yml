@@ -1,4 +1,6 @@
-installed: []
+installed:
+- assess
+- bdd
 settings:
   auto_execute_hooks: true
 hooks:
@@ -50,6 +52,15 @@ hooks:
     prompt: Commit outstanding changes before implementation?
     description: Auto-commit before implementation
     condition: null
+  - extension: bdd
+    command: speckit.bdd.scaffold
+    enabled: true
+    optional: true
+    priority: 10
+    prompt: Scaffold step definition stubs before starting implementation?
+    description: Creates step definition stubs so acceptance tests run (and fail)
+      before any code is written
+    condition: null
   before_checklist:
   - extension: git
     command: speckit.git.commit
@@ -89,6 +100,15 @@ hooks:
     optional: true
     prompt: Commit specification changes?
     description: Auto-commit after specification
+    condition: null
+  - extension: bdd
+    command: speckit.bdd.scenarios
+    enabled: true
+    optional: true
+    priority: 10
+    prompt: Generate Gherkin acceptance scenarios from the spec before planning?
+    description: Converts acceptance criteria into Gherkin feature files immediately
+      after spec is written
     condition: null
   after_clarify:
   - extension: git
