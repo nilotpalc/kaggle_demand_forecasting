@@ -1,4 +1,5 @@
 [tool.poetry]
+package-mode = false
 name = "demand-forecasting"
 version = "0.1.0"
 description = "Demand forecasting with StatsForecast, Prophet, LightGBM and SHAP"
